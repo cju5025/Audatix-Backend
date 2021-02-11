@@ -110,8 +110,7 @@ app.post('/login', (request, response) => {
 
             jwt.sign(payload, secret, (error, token) => {
                 if (error) throw new Error("Signing didn't work")
-
-                response.json({ token })
+                response.json({ user, token })
             })
         }).catch(error => response.json(error.message))
 })
