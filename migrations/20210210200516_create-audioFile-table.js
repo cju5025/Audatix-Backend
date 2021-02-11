@@ -7,6 +7,7 @@ exports.up = function(knex) {
         file.string('category')
         file.string('subCategory')
         file.integer('user_id')
+        file.integer('price')
     })
 };
 
