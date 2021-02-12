@@ -51,6 +51,12 @@ const upload = multer({
     })
 })
 
+app.delete('/cartitems/:id', (request, response) => {
+    const id = request.params.id
+    CartItem.query().deleteById(id)
+        .then(cartitem => response.json({ cartitem }))
+})
+
 app.post('/cartitems', (request, response) => {
     const { cartItem } = request.body
     return database('cartItems')
