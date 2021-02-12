@@ -70,6 +70,12 @@ app.get('/cartItems', (request, response) => {
         .then(items => response.json({ items }))
 })
 
+app.get('/sounds/:id', (request, response) => {
+    const id = request.params.id
+    AudioFile.query().findById(id)
+        .then(file => response.json({ file }))
+})
+
 app.get('/sounds', (request, response) => {
     AudioFile.query()
         .then(files => response.json({ files }))
