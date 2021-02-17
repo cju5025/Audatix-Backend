@@ -66,6 +66,11 @@ app.post('/purchasedItems', (request, response) => {
         })
 })
 
+app.get('/purchasedItems', (request, response) => {
+    PurchasedItem.query()
+        .then(items => response.json({ items }))
+})
+
 app.post('/audioFiles', (request, response) => {
     const { audioFile } = request.body
     return database('audioFiles')
