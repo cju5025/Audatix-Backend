@@ -46,14 +46,6 @@ exports.seed = function(knex) {
   price: 1
 },
 {
-  name: 'Alien Texture 01',
-  location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/Alien_Texture_01.wav',
-  category: 'Film & Game',
-  subCategory: 'Machine',
-  user_id: 21,
-  price: 1
-},
-{
   name: 'Alien Texture 02',
   location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/Alien_Texture_02.wav',
   category: 'Film & Game',
@@ -86,10 +78,10 @@ exports.seed = function(knex) {
   price: 1
 },
 {
-  name: 'QE Long Impact 01',
+  name: 'QE Metallic Burp',
   location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/QE_Impact_long_01.wav',
-  category: 'Film & Game',
-  subCategory: 'Machine',
+  category: 'Machine',
+  subCategory: 'Electronics',
   user_id: 21,
   price: 1
 },
@@ -104,8 +96,8 @@ exports.seed = function(knex) {
 {
   name: 'QE Long Impact 03',
   location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/QE_Impact_long_03.wav',
-  category: 'Film & Game',
-  subCategory: 'Machine',
+  category: 'Machine',
+  subCategory: 'Electronics',
   user_id: 21,
   price: 1
 },
