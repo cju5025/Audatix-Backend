@@ -292,24 +292,7 @@ exports.seed = function(knex) {
   subCategory: 'Film & Game',
   user_id: 21,
   price: 2
-},
-{
-  name: 'CyberTech Activation 08',
-  location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/pm_fssf2_cybertech_activation_1.wav',
-  category: 'Machine',
-  subCategory: 'Film & Game',
-  user_id: 23,
-  price: 1
-},
-{
-  name: 'CyberTech Activation 08',
-  location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/pm_fssf2_cybertech_activation_1.wav',
-  category: 'Machine',
-  subCategory: 'Film & Game',
-  user_id: 23,
-  price: 1
-},
-
+}
       ]);
     });
 };
