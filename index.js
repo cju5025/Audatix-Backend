@@ -29,7 +29,8 @@ const multerS3 = require('multer-s3');
 const User = require('./Models/User');
 const AudioFile = require('./Models/AudioFile');
 const CartItem = require('./Models/CartItem');
-const { request } = require('express');
+const PurchasedItem = require('./Models/PurchasedItem');
+// const { request } = require('express');
 
 // *****end of imports*****
 
@@ -50,6 +51,19 @@ const upload = multer({
             next(null, `wavs/${Date.now()}_${file.originalname}`);
         }
     })
+})
+
+app.post('/purchasedItems', (request, response) => {
+    const { purchasedItem } = request.body 
+    console.log(purchasedItem)
+    return database('purchasedItems')
+        .insert({
+            userID: purchasedItem.userID,
+            itemID: purchasedItem.itemID
+        }).returning('*')
+        .then(purchasedItem => {
+            response.json({ purchasedItem })
+        })
 })
 
 app.post('/audioFiles', (request, response) => {
