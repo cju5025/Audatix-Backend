@@ -194,7 +194,7 @@ exports.seed = function(knex) {
   location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/pm_fssf2_cybertech_activation_9.wav',
   category: 'Machine',
   subCategory: 'Film & Game',
-  user_id: 23,
+  user_id: 26,
   price: 1
 },
 {
@@ -290,7 +290,7 @@ exports.seed = function(knex) {
   location: 'https://audatixaudio.s3.us-east-2.amazonaws.com/wavs/pm_fssf2_cyber_tech_1.wav',
   category: 'Machine',
   subCategory: 'Film & Game',
-  user_id: 21,
+  user_id: 25,
   price: 2
 }
       ]);
