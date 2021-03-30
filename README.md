@@ -10,20 +10,4 @@ Audatix is designed as a platform for sound designers to host and sell their wor
 - Objection
 - PostgreSQL
 
-## Setup
-First, clone this repo. Then, to run the backend, first make sure you have npm installed: 
-```
-npm -v
-```
-
-If you do not have npm installed, simply enter the following into your terminal to install: 
-```
-npm install npm@latest
-```
-
-Once npm is installed, all you need to enter to run the backend is
-```
-npm run dev
-```
-
 Click [here](https://github.com/cju5025/Audatix-Frontend) for the frontend repository.
