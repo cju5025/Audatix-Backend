@@ -47,7 +47,6 @@ const upload = multer({
         s3,
         bucket: 'audatixaudio',
         key: (request, file, next) => {
-            console.log(file)
             next(null, `wavs/${Date.now()}_${file.originalname}`);
         }
     })
@@ -157,7 +156,7 @@ app.post('/users', (request, response) => {
                 .then(users => {
                     const user = users[0]
                     response.json({ user })
-                })//.catch(error => response.json(error.message))
+                }).catch(error => response.json(error.message))
 })
 
 app.post('/login', (request, response) => {
@@ -178,10 +177,10 @@ app.post('/login', (request, response) => {
             const arePasswordsTheSame = results[0]
             const user = results[1]
 
-            if (!arePasswordsTheSame) throw new Error("Wrong Passord MF")
+            if (!arePasswordsTheSame) throw new Error("Incorrect username or password")
 
             const payload = { username: user.username }
-            const secret = "NANANAA!"
+            const secret = process.env.JWT_SECRET
 
             jwt.sign(payload, secret, (error, token) => {
                 if (error) throw new Error("Signing didn't work")
