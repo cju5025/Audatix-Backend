@@ -20,7 +20,6 @@ const jwt = require('jsonwebtoken');
 const dotENV = require('dotenv');
 dotENV.config();
 
-// s3 upload deps
 
 const aws = require('aws-sdk');
 const multer = require('multer');
@@ -30,7 +29,6 @@ const User = require('./Models/User');
 const AudioFile = require('./Models/AudioFile');
 const CartItem = require('./Models/CartItem');
 const PurchasedItem = require('./Models/PurchasedItem');
-// const { request } = require('express');
 
 // *****end of imports*****
 
